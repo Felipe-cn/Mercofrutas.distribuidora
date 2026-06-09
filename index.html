@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercofrutas</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!--  BARRA DE NAVEGAÇÃO -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#inicio">
+      <div class="nav-logo-wrap">
+        <img src="imagens/MERCO-Photoroom.png" alt="Mercofrutas">
+      </div>
+      <span class="nav-brand-text">Mercofrutas</span>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navLinks"
+            aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+        <!-- Botão modo escuro -->
+        <li class="nav-item ms-lg-1">
+          <button class="btn-theme" id="themeBtn" title="Alternar tema" aria-label="Alternar tema claro/escuro">
+            <span id="themeIcon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+ 
+<section class="hero-section" id="inicio">
+  <div class="hero-content">
+    <img src="imagens/MERCO-Photoroom.png" alt="Mercofrutas">
+    <h1 class="hero-title">Bem vindo à Mercofrutas</h1>
+    <p class="hero-subtitle">Há 17 anos garantindo a nossos clientes qualidade e frescor dos produtos</p>
+    <a href="#sobre" class="btn btn-hero">Saiba Mais</a>
+  </div>
+</section>
+
+ <!-- CADASTRO-->
+<section class="cadastro-section" id="cadastro">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-title">Cadastro</span>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-9">
+        <div class="form-card">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nome</label>
+              <input type="text" class="form-control" placeholder="Seu nome completo"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-control" placeholder="seu@email.com"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Telefone</label>
+              <input type="tel" class="form-control" placeholder="(27) 99999-0000"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Tipo de Cliente</label>
+              <select class="form-select">
+                <option value="">Selecione...</option>
+                <option>Pequeno comércio</option>
+                <option>Grande rede</option>
+                <option>Distribuidor</option>
+              </select>
+            </div>
+            <div class="col-12 text-end mt-1">
+              <button class="btn btn-submit">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOBRE -->
+<section class="about-section" id="sobre">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-5">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+             alt="Distribuidora de frutas" class="about-img"/>
+      </div>
+      <div class="col-md-7">
+        <p class="about-text">
+          Bem-vindo à Mercofrutas, sua distribuidora atacadista de frutas nacionais e importadas
+          no CEASA de Cariacica (ES). Trabalhamos com produtos frescos, selecionados e de alta
+          qualidade, garantindo o melhor para o seu negócio todos os dias.
+          <br/><br/>
+          Conectamos produtores e fornecedores aos nossos clientes com eficiência, rapidez e
+          confiança, oferecendo uma grande variedade de frutas para atender desde pequenos
+          comércios até grandes redes. Na Mercofrutas, você encontra qualidade, variedade e
+          um atendimento que faz a diferença.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRODUTOS -->
+
+<section class="products-section" id="produtos">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-title">Produtos</span>
+      
+    <div class="filtro-container">
+      <h5>Filtrar</h5>
+  <input type="text" id="busca" placeholder="Buscar produto...">
+  <select id="categoriaFiltro">
+    <option value="todos">Todas categorias</option>
+    <option value="frutas">Frutas</option>
+    <option value="legumes">Legumes</option>
+    <option value="verduras">Verduras</option>
+  </select>
+</div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="maçã gala" data-categoria="frutas">
+          <img src="https://images.unsplash.com/photo-1589217157232-464b505b197f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwcGxlfGVufDB8fDB8fHww" alt="Maçã"/>
+          <div class="product-badge">Frutas</div>
+          <div class="product-body"><h6>Maçã Gala</h6><p>Nacional, alta qualidade</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="Beterraba" data-categoria="legumes">
+          <img src="https://images.unsplash.com/photo-1663961355715-cf362778dc0e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVldHxlbnwwfHwwfHx8MA%3D%3D" alt="Beterraba"/>
+          <div class="product-badge">Legumes</div>
+          <div class="product-body"><h6>Beterraba</h6><p>Alta qualidade</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="uva italiana" data-categoria="frutas">
+          <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdyYXBlfGVufDB8fDB8fHww" alt="Uva"/>
+          <div class="product-badge">Frutas</div>
+          <div class="product-body"><h6>Uva Italiana</h6><p>Importada, fresca e selecionada</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="melancia" data-categoria="frutas">
+          <img src="https://plus.unsplash.com/premium_photo-1725384940692-dc02e26ee9b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVsYW5jaWF8ZW58MHx8MHx8fDA%3D" alt="Melancia"/>
+          <div class="product-badge">Frutas</div>
+          <div class="product-body"><h6>Melancia</h6><p>Diretamente do produtor</p></div>
+        </div>
+      </div>
+       <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="alface" data-categoria="verduras">
+          <img src="https://plus.unsplash.com/premium_photo-1675365979619-27e23094b87e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGV0dHVjZXxlbnwwfHwwfHx8MA%3D%3D" alt="alface"/>
+          <div class="product-badge">Verduras</div>
+          <div class="product-body"><h6>alface</h6><p>fresca diretamente do produtor</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="cenoura" data-categoria="legumes">
+          <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Vub3VyYXxlbnwwfHwwfHx8MA%3D%3D" alt="cenoura"/>
+          <div class="product-badge">Legumes</div>
+          <div class="product-body"><h6>cenoura</h6><p>Diretamente do produtor</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="manga palmer" data-categoria="frutas">
+          <img src="https://images.unsplash.com/photo-1732472581875-89ff83f18439?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZ298ZW58MHx8MHx8fDA%3D" alt="Manga"/>
+          <div class="product-badge">Frutas</div>
+          <div class="product-body"><h6>Manga Palmer</h6><p>Suculenta, doce e fresca</p></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card produto" data-nome="Pepino" data-categoria="legumes">
+          <img src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3VjdW1iZXJ8ZW58MHx8MHx8fDA%3D" alt="Pepino"/>
+          <div class="product-badge">Legumes</div>
+          <div class="product-body"><h6>Pepino</h6><p>Alta qualidade</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="safra-section" id="safra">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-title" style="font-size:1.6rem">Calendário de Safra</span>
+      <p class="safra-subtitle">(Sazonalidade)</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-11">
+        <div class="safra-wrap">
+          <table class="safra-table">
+            <thead>
+              <tr>
+                <th style="width:26%">Categoria</th>
+                <th style="width:44%">Produto Selecionado</th>
+                <th style="width:30%">Melhor Época (Safra)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-normal">
+                <td class="cat-cell frutas-cell" rowspan="2">Frutas</td>
+                <td class="data-cell">Morango</td>
+                <td class="data-cell">Agosto a Outubro</td>
+              </tr>
+              <tr class="row-alt">
+                <td class="data-cell">Banana Prata</td>
+                <td class="data-cell">Ano Inteiro</td>
+              </tr>
+              <tr class="row-normal">
+                <td class="cat-cell legumes-cell" rowspan="2">Legumes</td>
+                <td class="data-cell">Abóbora</td>
+                <td class="data-cell">Abril a Julho</td>
+              </tr>
+              <tr class="row-alt">
+                <td class="data-cell">Batata Doce</td>
+                <td class="data-cell">Maio a Agosto</td>
+              </tr>
+              <tr class="row-normal">
+                <td class="cat-cell verduras-cell" rowspan="2">Verduras</td>
+                <td class="data-cell">Brócolis</td>
+                <td class="data-cell">Junho a Setembro</td>
+              </tr>
+              <tr class="row-alt">
+                <td class="data-cell">Alface Crespa</td>
+                <td class="data-cell">Março a Junho</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--CONTATO-->
+<section class="contact-section" id="contato">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-title">Contato</span>
+    </div>
+    <div class="row justify-content-center g-3 mt-1">
+      <div class="col-auto">
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <strong>CEASA de Cariacica – ES</strong>
+          <span>Galpão das Frutas</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <strong>(27) 9 9999-0000</strong>
+          <span>Seg–Sáb, 04h–12h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  © 2026 <a href="#">Mercofrutas</a>. Todos os direitos reservados. CEASA – Cariacica, ES.
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
